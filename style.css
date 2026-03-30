@@ -283,13 +283,15 @@ h1,h2,h4,h5,h6,h3{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  column-gap: 20px;
 }
  
 .header .header-list{
   display: flex;
   column-gap: 20px;
 }
+
+ggg
 
 
 
