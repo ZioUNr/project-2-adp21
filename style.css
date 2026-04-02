@@ -256,6 +256,7 @@ svg * {
 
     --transition-duration:0.2s;
 
+    --header-height:90px;
 
 }
 
@@ -327,8 +328,9 @@ h1,h2,h4,h5,h6,h3{
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
   column-gap: 20px;
+  min-height: var(--header-height);
   padding-inline: 32px;
   background-color: var(--color-dark-alt);
 }
@@ -346,7 +348,7 @@ h1,h2,h4,h5,h6,h3{
  .header-link{
   display: inline-flex;
   align-items: center;
-  height: 50px;
+  height: var(--header-height);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
@@ -396,6 +398,82 @@ box-shadow: 16px 0 0 currentColor;
 }
 
 
+
+.banner-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 36px 70px;
+  min-height: calc(100vh - var(--header-height));
+  color: var(--color-light);
+  background-color: var(--color-dark-alt);
+}
+
+.txtcrs{
+  text-transform: uppercase;
+}
+
+.title {
+  display: flex;
+  align-items: end;
+  font-size: clamp(16px,1.555vw,30px);
+  line-height: 126%;
+  font-weight: 700;
+}
+.title::before{
+  content: '';
+  width: clamp(50px,10.10vw,194px);
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url('/imges/Frame.svg') center/contain no-repeat;
+
+}
+
+.title-txt{
+  font-size: min(18.75vw,360px);
+  line-height: 1;
+}
+
+.banner-pagination-list{
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.banner-pagination-list{
+  display: flex;
+}
+
+.banner-pagination-button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7.5px;
+  background-color: transparent;
+  border: none;
+}
+
+.banner-pagination-button::after{
+  content: '';
+  width: 10px;
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+  transition-duration: var(--transition-duration);
+}
+
+.banner-pagination-button.active::after{
+  background-color: var(--color-light);
+}
+
+.banner-pagination-button:not(.active):hover::after{
+  border-color: var(--color-dark-gray);
+  background: var(--color-dark-gray);
+}
+
+
+
 @media(max-width: 1024px){
 
   .header{
@@ -420,6 +498,9 @@ box-shadow: 16px 0 0 currentColor;
     height: 50px;
   }
 
+  .banner-body{
+    padding-inline: 15px;
+  }
 }
 
 @media(max-width: 450px)
@@ -432,5 +513,3 @@ column-gap: 12px;
     column-gap: 14px;
 }
 }
-
-
