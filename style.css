@@ -280,6 +280,34 @@ a {
 a:hover{
   color: var(--color-light-gray);
 }
+
+.button.transparent{
+  position: relative;
+  height: var(--input-height);
+  padding-left: 31px;
+  padding-right: 80px;
+  background-color:transparent;
+  border: var(--border);
+}
+
+.button.transparent::after{
+content: '';
+  aspect-ratio: 1;
+height: 100%;
+background: url(/imges/svg.qodef-svg--button-arrow.svg) center/70% no-repeat;
+position: absolute; 
+right: 0;
+border: var(--border);
+border-radius: 50%;
+}
+
+.button.transparent:hover{
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+
+
 .container{
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
@@ -304,6 +332,13 @@ h1,h2,h4,h5,h6,h3{
     font-weight: 700;
     text-transform: uppercase;
 }
+p{
+  margin-block: 0;
+}
+
+p:not([class]):not(:last-child){
+  margin-bottom: 20px;
+}
 
 .title-medium{
   font-size: 40px;
@@ -319,10 +354,24 @@ h1,h2,h4,h5,h6,h3{
   content: '';
   display: block;
   width: 26px;
+  position:absolute;
+  right: calc(100% + 8px);
   aspect-ratio: 1;
   background: url(/imges/svg.qodef-svg--title-decoration.svg) center/contain no-repeat;
  }
 
+ .backdrop-title::after{
+  color: transparent;
+  content: attr(data-title);
+  position: absolute;
+  z-index: -1;
+  left: -0.6em;
+  top: -0.45em;
+  font-size: 2.8em;
+  font-family: var(--font-family-accent);
+  -webkit-text-stroke:1px var(--color-light-gray); 
+  text-storke: 1px var(--color-light-gray);
+}
 
 .button{
   display: inline-flex;
@@ -330,6 +379,7 @@ h1,h2,h4,h5,h6,h3{
   height: 38px;
   padding-inline: 26px ;
   font-weight: 700;
+  text-decoration: none;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 1.2px;
@@ -513,6 +563,18 @@ box-shadow: 16px 0 0 currentColor;
 
 .motivation-card-img{
   margin-block: -60px ;
+}
+
+.motivation-card-title:not(:last-child){
+  margin-bottom: 14px;
+}
+
+.motivation-card-description{
+  width: 400px;
+}
+
+.motivation-card-description:not(:last-child){
+  margin-bottom: 37px;
 }
 
 @media(max-width: 1024px){
