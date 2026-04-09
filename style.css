@@ -576,6 +576,13 @@ box-shadow: 16px 0 0 currentColor;
 .motivation-card-description:not(:last-child){
   margin-bottom: 37px;
 }
+@media(max-width: 1915px){
+
+
+.motivation-card-img{
+  margin-block: -30px ;}
+}
+
 
 @media(max-width: 1024px){
 
@@ -586,6 +593,7 @@ box-shadow: 16px 0 0 currentColor;
     padding-inline: 15px;
     
   }
+  
   
   .header-nav{
     order: 1;
@@ -604,6 +612,23 @@ box-shadow: 16px 0 0 currentColor;
   .banner-body{
     padding-inline: 15px;
   }
+
+  .motivation-card-body{
+    width: 50%;
+    height: auto;
+  }
+.motivation-card-description{
+  width: 50%;
+    height: auto;
+}
+
+
+  .motivation-card-img{
+  width: 50%;
+  height: auto;
+}
+
+
 }
 
 @media(max-width: 450px)
