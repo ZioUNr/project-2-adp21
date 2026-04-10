@@ -636,25 +636,30 @@ box-shadow: 16px 0 0 currentColor;
 
 }
 
-@media(max-width:880px)
-{.title-medium{
-    font-size:90%;
+@media(max-width:880px){
+  .title-medium{
+    font-size:35px;
  }
  .button.transparent{
   padding-left: 15px;
     padding-right: 60px;
  }
+  .backdrop-title::after{
+  font-size: 40px;
+
+ }
 }
 
 
 @media(max-width:750px){
- .backdrop-title::after{
-  font-size: clamp(30px,2.98vw,50px);
-  padding-left: 10px;
-  top: -15px;
+
+  .backdrop-title::after{
+  font-size: 40px;
+
  }
+
  .title-medium{
-    font-size: clamp(20px,2.98vw,40px);
+    font-size: clamp(20px,2.6vw,63px);
  }
  .button.transparent{
   padding-left: 15px;
