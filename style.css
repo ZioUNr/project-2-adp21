@@ -553,7 +553,7 @@ box-shadow: 16px 0 0 currentColor;
 .motivation-card{
   display: flex;
   justify-content: start;
-  column-gap: clamp(30px,10.42vw,200px);
+  column-gap: clamp(30px,10.12vw,200px);
   align-items: center;
 }
 
@@ -584,7 +584,7 @@ box-shadow: 16px 0 0 currentColor;
 }
 
 
-@media(max-width: 1024px){
+@media(max-width: 1090px){
 
   .header{
     flex-wrap: wrap;
@@ -618,7 +618,7 @@ box-shadow: 16px 0 0 currentColor;
     height: auto;
   }
 .motivation-card-description{
-  width: 50%;
+  width: 90%;
     height: auto;
 }
 
@@ -626,10 +626,21 @@ box-shadow: 16px 0 0 currentColor;
   .motivation-card-img{
   width: 50%;
   height: auto;
+   margin-block: 50px ;
 }
 
 
 }
+
+@media(max-width:750px){
+ .backdrop-title::after{
+  font-size: clamp(30px,2.98vw,50px);
+ }
+ .title-medium{
+    font-size: clamp(20px,2.98vw,40px);
+ }
+}
+
 
 @media(max-width: 450px)
 {
